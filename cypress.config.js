@@ -2,6 +2,7 @@ const cypress = require("cypress");
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'uph9yd',
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
     reporterEnabled: 'cypress-mochawesome-reporter, mocha-junit-reporter',
@@ -22,5 +23,7 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on)
       // implement node event listeners here
     },
+    baseUrl: 'https://site.getnet.com.br'
+    // testIsolation:false
   },
 });
