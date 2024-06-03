@@ -6,7 +6,7 @@ class HeaderAjuda {
         cy.get(el.logo).should('be.visible')
     }
     noMenuAjudaClicaremCentraldeAjuda() {        
-        cy.get(el.ajuda).realClick()
+        cy.contains('Ajuda').realClick()
         cy.get(el.modalAjuda).should('be.visible')
         cy.wait(2000)
         cy.contains('Central de ajuda').realClick()
@@ -15,8 +15,8 @@ class HeaderAjuda {
         cy.url().should('eq','https://site.getnet.com.br/duvidas/')
     }
     
-    noCampoBuscaDigitePalavraChave() {     
-        cy.get(el.campoBusca).type('Boleto{enter}');
+    noCampoBuscaDigitePalavraChave(palavraChave) {     
+        cy.get(el.campoBusca).type(palavraChave+'{enter}');
     }
     selecionarOpcaonaModal() {
         cy.contains('Eu concluí a negociação, de que forma receberei meu boleto?').click()          

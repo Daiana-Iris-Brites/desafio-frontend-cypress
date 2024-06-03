@@ -13,11 +13,24 @@ describe('Teste na página de Ajuda do site Getnet', () => {
       });
 
 
-    it('Teste de Funcionalidade da Central de Ajuda - Verificação da Abertura da Modal de Resposta', () => {
+    it('Given que que acesso o site https://site.getnet.com.br', () => {
       headerAjuda.visitarPagina();
+    });
+
+    it('And no menu "Ajuda", clico em "Central de Ajuda"', () => {
       headerAjuda.noMenuAjudaClicaremCentraldeAjuda();
-      headerAjuda.noCampoBuscaDigitePalavraChave
-      headerAjuda.selecionarOpcaonaModal();        // Verifique o título da modal
+    });
+
+    it('And no campo de busca digito a palavra-chave “Boleto”', () => {
+      const palavraChave = 'Boleto'
+      headerAjuda.noCampoBuscaDigitePalavraChave(palavraChave);  
+    });
+
+    it('When seleciono a opção “Eu concluí a negociação, de que forma receberei meu boleto?”', () => {
+      headerAjuda.selecionarOpcaonaModal();   
+    });
+
+    it('Then verifico se a modal foi aberta com a mensagem o texto explicativo a dúvida', () => {
       headerAjuda.verificarSeModalFoiAbertaComMensagemExplicandoDuvida()
     });
   });

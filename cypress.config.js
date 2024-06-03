@@ -23,7 +23,7 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on)
       // implement node event listeners here
     },
-    baseUrl: 'https://site.getnet.com.br'
-    // testIsolation:false
+    baseUrl: 'https://site.getnet.com.br',
+    testIsolation: false
   },
 });
