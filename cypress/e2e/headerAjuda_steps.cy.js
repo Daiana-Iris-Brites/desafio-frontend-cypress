@@ -15,8 +15,7 @@ describe('Teste na página de Ajuda do site Getnet', () => {
     });
 
     it('And no campo de busca digito a palavra-chave “Boleto”', () => {
-      const palavraChave = 'Boleto'
-      pesquisaPage.noCampoBuscaDigitePalavraChave(palavraChave);  
+      pesquisaPage.noCampoBuscaDigitePalavraChave();  
     });
 
     it('When seleciono a opção “Eu concluí a negociação, de que forma receberei meu boleto?”', () => {

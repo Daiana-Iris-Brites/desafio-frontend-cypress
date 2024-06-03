@@ -30,6 +30,15 @@ Para o desafio, foram ultilizadas as seguintes tecnologias:
    - Mocha JUnit Reporter: Reporter do Mocha para gerar relatórios XML compatíveis com JUnit.
    - Cypress Mochawesome Reporter: Reporter do Cypress para gerar relatórios HTML detalhados dos testes.
    - Cypress Multi Reporter: Pacote que permite a geração de múltiplos relatórios a partir de uma única execução dos testes.
+
+>ATENÇÃO
+Para simular enventos reais do usuário, foi utilizado o plugin cypress-real-events.
+Para instalar é só rodar o seguinte comando no terminal:
+
+```bash
+  npm install cypress-real-events --save-dev
+
+```
 ---
 
 ## Executar o teste
@@ -63,5 +72,6 @@ Ao executar os testes, os relatórios HTML estão sendo gravados dentro do diret
 
 ### Oportunidades de melhorias da automação de teste: 
 - É possível configurar vídeos para o report
-- Nos elementos, ao acompanhar o desenvolvimento do time, a troca é muito construtiva no dia a dia. Seria interessante ao ver melhorias no desenvolvimento e possíveis cenários automatizados, solicitar para o time a colocar do atributo de data-teste para facilitar na criação dos testes. 
+- Ajustar plugin cucumber e ajustar o código para que reconheça as variáveis descritas em Gherkin
+- No acompanhamento das entregas junto ao time, é importante o QA apontar oportunidades de melhorias nos atributos dos elementos, como o exemplo de[data-test], para facilitar na automação. 
 
